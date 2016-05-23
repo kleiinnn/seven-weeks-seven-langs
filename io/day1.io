@@ -14,13 +14,22 @@ true and ""
 true and nil
 
 Foo := Object clone
-Foo desc := "a foo that bars"
-Foo doSomething := method("this does seomthing!" println)
+
+// The ::= assignment also creates an setter
+Foo desc ::= "a foo that bars"
+Foo doSomething := method("this does something!" println)
 
 bar := Foo clone
 
 //do something
 bar doSomething
 
+// execute by name
+bar getSlot("doSomething") call
+
+// as we created desc with ::= we can use the setter to assign a value
+bar setDesc("a bar that foos")
+
 //get the slot of bar's prototype slots
 bar proto println
+
