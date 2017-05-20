@@ -6,7 +6,7 @@ plays('Hans Zimmer', 'Piano').
 
 genre('Johnny Cash', 'Folk').
 genre('Hans Zimmer', 'Classic').
-genre('Serj Tanian', 'Rock').
+genre('Serj Tankian', 'Rock').
 genre('Tim McIlrath', 'Rock').
 
 uses(X, Y) :- plays(Z, X), genre(Z, Y).
